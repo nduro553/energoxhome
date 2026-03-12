@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energox Home - Professional Property Management Services</title>
+    <meta name="description" content="Energox Home provides comprehensive property management services for residential and commercial properties. Expert maintenance, tenant relations, and property care solutions.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .navBar_kx7m {
+            background-color: #2c3e50;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navContainer_kx7m {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navLogo_kx7m {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .navMenu_kx7m {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .navMenu_kx7m a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .navMenu_kx7m a:hover {
+            color: #3498db;
+        }
+
+        .heroSection_qp9n {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .heroContent_qp9n {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .heroTitle_qp9n {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .heroSubtitle_qp9n {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .heroCTA_qp9n {
+            display: inline-block;
+            background-color: #f39c12;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .heroCTA_qp9n:hover {
+            background-color: #e67e22;
+        }
+
+        .containerMain_lm2k {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .sectionBlock_rt5j {
+            background: white;
+            padding: 50px 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .sectionTitle_rt5j {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 1rem;
+        }
+
+        .sectionText_rt5j {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .gridLayout_hy8p {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .gridCard_hy8p {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s;
+        }
+
+        .gridCard_hy8p:hover {
+            transform: translateY(-5px);
+        }
+
+        .cardTitle_hy8p {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+            font-weight: bold;
+        }
+
+        .cardText_hy8p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .imageBlock_zx4c {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .imageBlock_zx4c img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .reviewSection_nm3q {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 40px 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+
+        .reviewCard_nm3q {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid #f39c12;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .reviewAuthor_nm3q {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .reviewText_nm3q {
+            color: #555;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .reviewRating_nm3q {
+            color: #f39c12;
+            font-size: 1.1rem;
+        }
+
+        .historyBlock_jk9l {
+            background: white;
+            padding: 35px;
+            margin: 30px 0;
+            border-radius: 8px;
+            border-top: 5px solid #667eea;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .historyYear_jk9l {
+            font-size: 1.8rem;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .historyTitle_jk9l {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .historyText_jk9l {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .footerSection_qw2m {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 20px;
+            margin-top: 60px;
+        }
+
+        .footerContainer_qw2m {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footerBlock_qw2m h3 {
+            color: #3498db;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footerBlock_qw2m p {
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footerPhone_qw2m {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .footerPhone_qw2m:hover {
+            color: #f39c12;
+        }
+
+        .footerBottom_qw2m {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            font-size: 0.9rem;
+        }
+
+        .policyLink_qw2m {
+            color: #3498db;
+            cursor: pointer;
+            text-decoration: underline;
+            margin: 0 10px;
+        }
+
+        .policyLink_qw2m:hover {
+            color: #f39c12;
+        }
+
+        .modal_popup_zx9k {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            overflow-y: auto;
+        }
+
+        .modalContent_zx9k {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .closeBtn_zx9k {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .closeBtn_zx9k:hover {
+            color: #000;
+        }
+
+        .modalTitle_zx9k {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 1rem;
+        }
+
+        .modalText_zx9k {
+            color: #555;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .modalText_zx9k h3 {
+            color: #2c3e50;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .modalText_zx9k ul {
+            margin-left: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .modalText_zx9k li {
+            margin-bottom: 0.5rem;
+        }
+
+        .ctaButton_mk4p {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            border: none;
+            margin: 10px 5px 10px 0;
+            font-size: 0.95rem;
+        }
+
+        .ctaButton_mk4p:hover {
+            background-color: #2980b9;
+        }
+
+        .servicesList_pq7r {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .servicesList_pq7r li {
+            padding: 12px 0;
+            border-bottom: 1px solid #ecf0f1;
+            color: #555;
+        }
+
+        .servicesList_pq7r li:before {
+            content: "✓ ";
+            color: #3498db;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .highlightBox_vn2m {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .highlightBox_vn2m h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .twoColumn_jm5k {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            .twoColumn_jm5k {
+                grid-template-columns: 1fr;
+            }
+
+            .navMenu_kx7m {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .heroTitle_qp9n {
+                font-size: 2rem;
+            }
+
+            .heroSubtitle_qp9n {
+                font-size: 1rem;
+            }
+
+            .sectionTitle_rt5j {
+                font-size: 1.6rem;
+            }
+
+            .footerContainer_qw2m {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navBar_kx7m">
+    <div class="navContainer_kx7m">
+        <a href="#home" class="navLogo_kx7m">Energox Home</a>
+        <ul class="navMenu_kx7m">
+            <li><a onclick="scrollToSection('services')">Services</a></li>
+            <li><a onclick="scrollToSection('maintenance')">Maintenance</a></li>
+            <li><a onclick="scrollToSection('tenant')">Tenant Relations</a></li>
+            <li><a onclick="scrollToSection('financial')">Financial Reports</a></li>
+            <li><a onclick="scrollToSection('emergency')">Emergency Support</a></li>
+            <li><a onclick="scrollToSection('technology')">Technology</a></li>
+            <li><a onclick="scrollToSection('about')">About Us</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="heroSection_qp9n" id="home">
+    <div class="heroContent_qp9n">
+        <h1 class="heroTitle_qp9n">Professional Property Management Solutions</h1>
+        <p class="heroSubtitle_qp9n">Comprehensive property care and management services for residential and commercial properties. Click here to continue with our expert team and discover how we can transform your property management experience.</p>
+        <button class="heroCTA_qp9n" onclick="scrollToSection('services')">Get Started Today</button>
+    </div>
+</section>
+
+<!-- Main Container -->
+<div class="containerMain_lm2k">
+
+    <!-- Services Section -->
+    <section class="sectionBlock_rt5j" id="services">
+        <h2 class="sectionTitle_rt5j">Our Comprehensive Services</h2>
+        <p class="sectionText_rt5j">Energox Home delivers a full spectrum of property management services designed to maximize your property's potential while minimizing your operational burden. Our experienced team handles every aspect of property administration with precision and care. From routine maintenance coordination to complex tenant relations, we ensure your property operates at peak efficiency. Our services encompass preventative maintenance scheduling, emergency response protocols, tenant screening and placement, rent collection and accounting, lease enforcement, property inspections, and comprehensive reporting. We utilize advanced property management software to streamline operations and provide real-time access to your property data. Our commitment to excellence means your property receives the attention it deserves. <button class="ctaButton_mk4p" onclick="scrollToSection('maintenance')">Click here to continue</button></p>
+        
+        <div class="gridLayout_hy8p">
+            <div class="gridCard_hy8p">
+                <h3 class="cardTitle_hy8p">Routine Maintenance</h3>
+                <p class="cardText_hy8p">Regular inspections, preventative maintenance scheduling, HVAC servicing, plumbing repairs, electrical system maintenance, roof inspections, and seasonal property preparations to ensure optimal functionality.</p>
+            </div>
+            <div class="gridCard_hy8p">
+                <h3 class="cardTitle_hy8p">Tenant Screening</h3>
+                <p class="cardText_hy8p">Comprehensive background checks, credit verification, employment history validation, reference checks, and eviction history review to ensure qualified tenants for your property.</p>
+            </div>
+            <div class="gridCard_hy8p">
+                <h3 class="cardTitle_hy8p">Rent Collection</h3>
+                <p class="cardText_hy8p">Automated rent collection systems, late payment handling, payment processing, accounting reconciliation, and detailed financial reporting for complete transparency.</p>
+            </div>
+            <div class="gridCard_hy8p">
+                <h3 class="cardTitle_hy8p">Lease Management</h3>
+                <p class="cardText_hy8p">Lease preparation, renewal negotiations, compliance verification, violation documentation, and enforcement procedures to protect your property interests.</p>
+            </div>
+            <div class="gridCard_hy8p">
+                <h3 class="cardTitle_hy8p">Property Inspections</h3>
+                <p class="cardText_hy8p">Move-in inspections, routine property walkthroughs, move-out inspections, damage documentation, and condition assessments with photographic evidence.</p>
+            </div>
+            <div class="gridCard_hy8p">
+                <h3 class="cardTitle_hy8p">Emergency Response</h3>
+                <p class="cardText_hy8p">24/7 emergency hotline, rapid response protocols, contractor coordination, temporary repairs, and damage mitigation to minimize property impact.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Section -->
+    <section class="sectionBlock_rt5j" id="maintenance">
+        <h2 class="sectionTitle_rt5j">Advanced Maintenance Programs</h2>
+        <p class="sectionText_rt5j">Our maintenance division operates with a proactive approach to property care, utilizing predictive maintenance strategies and preventative protocols. We maintain relationships with vetted contractors across all trades including plumbing, electrical, HVAC, carpentry, and landscaping services. Our maintenance coordinators schedule work efficiently to minimize tenant disruption while ensuring rapid response to urgent issues. We track all maintenance activities in our digital system, creating a comprehensive maintenance history for your property. This documentation proves invaluable for insurance claims, property valuations, and warranty tracking. Our team conducts seasonal inspections to identify potential issues before they become costly problems.</p>
+        
+        <div class="imageBlock_zx4c">
+            <img src="https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Professional maintenance team working on property">
+        </div>
+
+        <div class="twoColumn_jm5k">
+            <div>
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">Preventative Maintenance</h3>
+                <ul class="servicesList_pq7r">
+                    <li>HVAC system servicing and filter replacement</li>
+                    <li>Plumbing inspections and drain cleaning</li>
+                    <li>Electrical system testing and safety checks</li>
+                    <li>Roof inspections and gutter cleaning</li>
+                    <li>Foundation and structural assessments</li>
+                    <li>Appliance maintenance and repairs</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">Emergency Services</h3>
+                <ul class="servicesList_pq7r">
+                    <li>Water damage mitigation and restoration</li>
+                    <li>Fire damage assessment and coordination</li>
+                    <li>Mold remediation and prevention</li>
+                    <li>Pest control and infestation management</li>
+                    <li>Lockout and security breach response</li>
+                    <li>Utility emergency coordination</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tenant Relations Section -->
+    <section class="sectionBlock_rt5j" id="tenant">
+        <h2 class="sectionTitle_rt5j">Tenant Relations & Communication</h2>
+        <p class="sectionText_rt5j">Effective tenant relations form the foundation of successful property management. Our team maintains professional, respectful communication with all tenants while enforcing lease terms and property policies. We handle tenant inquiries promptly, address maintenance requests efficiently, and resolve conflicts through mediation when necessary. Our tenant portal provides 24/7 access to account information, maintenance request submission, and payment options. We conduct regular property meetings to discuss community standards, upcoming maintenance, and lease compliance. Our approach balances tenant satisfaction with property protection, creating stable rental communities. We manage lease violations through proper documentation and legal procedures, ensuring fair treatment while protecting your property investment. <button class="ctaButton_mk4p" onclick="scrollToSection('financial')">Click here to continue</button></p>
+
+        <div class="highlightBox_vn2m">
+            <h3>Tenant Satisfaction Guarantee</h3>
+            <p>We maintain an average tenant satisfaction rating of 4.7 out of 5 stars through responsive communication, fair policies, and professional service delivery.</p>
+        </div>
+    </section>
+
+    <!-- Financial Reports Section -->
+    <section class="sectionBlock_rt5j" id="financial">
+        <h2 class="sectionTitle_rt5j">Financial Management & Reporting</h2>
+        <p class="sectionText_rt5j">Transparent financial management is critical to property ownership success. Energox Home provides detailed monthly financial reports including rent collection status, expense documentation, maintenance costs, and net income calculations. Our accounting system tracks every transaction, providing audit-ready documentation for tax purposes. We handle security deposit accounting separately, maintaining compliance with state regulations. Our financial reports include variance analysis comparing actual expenses to budgeted amounts, helping you understand spending patterns. We provide quarterly performance summaries highlighting key metrics and trends. Our system integrates with major accounting software, simplifying your tax preparation process. We maintain detailed records of all property-related expenses for depreciation tracking and tax deduction purposes.</p>
+
+        <div class="gridLayout_hy8p">
+            <div class="gridCard_hy8p">
+                <h3 class="cardTitle_hy8p">Monthly Statements</h3>
+                <p class="cardText_hy8p">Comprehensive income and expense reports with detailed transaction breakdowns, rent collection summaries, and expense categorization for complete financial visibility.</p>
+            </div>
+            <div class="gridCard_hy8p">
+                <h3 class="cardTitle_hy8p">Tax Documentation</h3>
+                <p class="cardText_hy8p">Organized expense records, depreciation schedules, 1099 contractor documentation, and year-end summaries prepared for tax professional review.</p>
+            </div>
+            <div class="gridCard_hy8p">
+                <h3 class="cardTitle_hy8p">Budget Analysis</h3>
+                <p class="cardText_hy8p">Annual budget development, expense forecasting, capital improvement planning, and variance analysis to optimize property profitability.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Support Section -->
+    <section class="sectionBlock_rt5j" id="emergency">
+        <h2 class="sectionTitle_rt5j">24/7 Emergency Support System</h2>
+        <p class="sectionText_rt5j">Property emergencies don't follow business hours. Our 24/7 emergency support system ensures rapid response to urgent situations at any time. Our emergency hotline connects you to experienced coordinators who assess situations, dispatch appropriate contractors, and manage crisis response. We maintain relationships with emergency service providers including plumbers, electricians, HVAC technicians, and restoration companies available for immediate dispatch. Our emergency protocols minimize property damage, protect tenant safety, and document incidents for insurance purposes. We coordinate with insurance companies, providing detailed damage reports and supporting documentation. Our emergency response team has handled thousands of situations from burst pipes to electrical fires, always prioritizing safety and property protection.</p>
+
+        <div class="imageBlock_zx4c">
+            <img src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Emergency response team ready for action">
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="sectionBlock_rt5j" id="technology">
+        <h2 class="sectionTitle_rt5j">Property Management Technology Platform</h2>
+        <p class="sectionText_rt5j">Our proprietary property management platform integrates all aspects of property administration into one user-friendly system. Owners access real-time property data, financial reports, maintenance histories, and tenant information through a secure online portal. Tenants submit maintenance requests, pay rent, and access account information through the tenant portal. Our system automates routine tasks including rent reminders, maintenance scheduling, and financial reporting. Mobile applications provide on-the-go access to critical information for our management team. Integration with accounting software streamlines financial reconciliation and tax preparation. Our platform includes document management, lease storage, inspection photo galleries, and communication logs. Advanced analytics provide insights into property performance, expense trends, and operational efficiency. <button class="ctaButton_mk4p" onclick="scrollToSection('about')">Click here to continue</button></p>
+
+        <div class="twoColumn_jm5k">
+            <div>
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">Owner Portal Features</h3>
+                <ul class="servicesList_pq7r">
+                    <li>Real-time financial dashboards and reporting</li>
+                    <li>Tenant information and lease management</li>
+                    <li>Maintenance request tracking and history</li>
+                    <li>Document storage and retrieval</li>
+                    <li>Communication logs and notifications</li>
+                    <li>Performance analytics and metrics</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">Tenant Portal Features</h3>
+                <ul class="servicesList_pq7r">
+                    <li>Online rent payment processing</li>
+                    <li>Maintenance request submission</li>
+                    <li>Account balance and payment history</li>
+                    <li>Lease document access</li>
+                    <li>Community announcements and updates</li>
+                    <li>Direct messaging with management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="sectionBlock_rt5j" id="about">
+        <h2 class="sectionTitle_rt5j">About Energox Home</h2>
+        <p class="sectionText_rt5j">Energox Home has established itself as a trusted property management partner serving residential and commercial property owners throughout the region. Our company was founded on principles of integrity, professionalism, and client-focused service. We believe property management should be transparent, efficient, and stress-free for property owners. Our team comprises experienced professionals with backgrounds in real estate, accounting, maintenance coordination, and tenant relations. We stay current with property management regulations, industry best practices, and technological advancements. Our commitment to continuous improvement means we regularly update our processes, training, and systems. We measure success not just by financial metrics, but by tenant satisfaction, property condition, and owner peace of mind. Our reputation is built on consistent delivery of promised services and honest communication with all stakeholders.</p>
+
+        <div class="imageBlock_zx4c">
+            <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Professional property management team">
+        </div>
+    </section>
+
+    <!-- Business History Section -->
+    <div class="historyBlock_jk9l">
+        <div class="historyYear_jk9l">2008</div>
+        <div class="historyTitle_jk9l">Company Foundation</div>
+        <div class="historyText_jk9l">Energox Home was established with a vision to revolutionize property management through professional service and innovative technology. Our founders brought decades of combined real estate experience to create a company focused on owner satisfaction and property excellence.</div>
+    </div>
+
+    <div class="historyBlock_jk9l">
+        <div class="historyYear_jk9l">2011</div>
+        <div class="historyTitle_jk9l">Technology Platform Launch</div>
+        <div class="historyText_jk9l">We developed our proprietary property management software, integrating tenant portals, owner dashboards, and financial reporting tools. This technology platform became the foundation for our operational efficiency and client satisfaction.</div>
+    </div>
+
+    <div class="historyBlock_jk9l">
+        <div class="historyYear_jk9l">2014</div>
+        <div class="historyTitle_jk9l">Regional Expansion</div>
+        <div class="historyText_jk9l">Energox Home expanded operations to serve additional markets, growing our portfolio to over 500 managed properties. We established regional offices and hired specialized teams to maintain service quality across all locations.</div>
+    </div>
+
+    <div class="historyBlock_jk9l">
+        <div class="historyYear_jk9l">2017</div>
+        <div class="historyTitle_jk9l">Industry Recognition</div>
+        <div class="historyText_jk9l">Our company received multiple industry awards for property management excellence, tenant satisfaction, and innovative practices. These recognitions validated our commitment to professional service delivery and continuous improvement.</div>
+    </div>
+
+    <div class="historyBlock_jk9l">
+        <div class="historyYear_jk9l">2020</div>
+        <div class="historyTitle_jk9l">Digital Transformation</div>
+        <div class="historyText_jk9l">We implemented advanced analytics, mobile applications, and cloud-based systems to enhance operational efficiency. Our technology investments enabled seamless remote management and improved communication with owners and tenants.</div>
+    </div>
+
+    <div class="historyBlock_jk9l">
+        <div class="historyYear_jk9l">2023</div>
+        <div class="historyTitle_jk9l">Sustainability Initiative</div>
+        <div class="historyText_jk9l">Energox Home launched comprehensive sustainability programs including energy efficiency audits, water conservation initiatives, and green maintenance practices. We help property owners reduce environmental impact while lowering operational costs.</div>
+    </div>
+
+    <!-- Reviews Section -->
+    <section class="reviewSection_nm3q">
+        <h2 class="sectionTitle_rt5j" style="color: #2c3e50; border-bottom-color: #f39c12;">Client Reviews & Testimonials</h2>
+
+        <div class="reviewCard_nm3q">
+            <div class="reviewAuthor_nm3q">Michael Richardson - Residential Property Owner</div>
+            <div class="reviewText_nm3q">"Energox Home transformed my property management experience. Their detailed financial reports and responsive communication give me complete peace of mind. I've reduced my management stress by 90% since partnering with them."</div>
+            <div class="reviewRating_nm3q">★★★★★ 5/5 Stars</div>
+        </div>
+
+        <div class="reviewCard_nm3q">
+            <div class="reviewAuthor_nm3q">Sarah Mitchell - Commercial Property Manager</div>
+            <div class="reviewText_nm3q">"Their emergency response system is exceptional. When we had a water leak at 2 AM, they had a contractor on-site within 45 minutes. The damage mitigation and insurance coordination was seamless and professional."</div>
+            <div class="reviewRating_nm3q">★★★★★ 5/5 Stars</div>
+        </div>
+
+        <div class="reviewCard_nm3q">
+            <div class="reviewAuthor_nm3q">James Patterson - Multi-Property Investor</div>
+            <div class="reviewText_nm3q">"Managing multiple properties across different locations was overwhelming until I hired Energox Home. Their centralized reporting system and professional tenant screening have significantly improved my portfolio performance."</div>
+            <div class="reviewRating_nm3q">★★★★★ 5/5 Stars</div>
+        </div>
+
+        <div class="reviewCard_nm3q">
+            <div class="reviewAuthor_nm3q">Jennifer Walsh - Residential Tenant</div>
+            <div class="reviewText_nm3q">"As a tenant, I appreciate how responsive Energox Home is to maintenance requests. They coordinate repairs quickly and professionally. The online portal makes paying rent and communicating with management very convenient."</div>
+            <div class="reviewRating_nm3q">★★★★☆ 4.5/5 Stars</div>
+        </div>
+
+        <div class="reviewCard_nm3q">
+            <div class="reviewAuthor_nm3q">David Chen - Property Investment Group</div>
+            <div class="reviewText_nm3q">"Their financial reporting is incredibly detailed and helpful for tax planning. The team understands investment property accounting and provides documentation that makes tax season much easier. Highly recommended for serious investors."</div>
+            <div class="reviewRating_nm3q">★★★★★ 5/5 Stars</div>
+        </div>
+
+        <div class="reviewCard_nm3q">
+            <div class="reviewAuthor_nm3q">Amanda Foster - First-Time Property Owner</div>
+            <div class="reviewText_nm3q">"I was nervous about property management as a first-time owner. Energox Home's team educated me on the process and handled everything professionally. Their guidance has been invaluable in building my real estate portfolio."</div>
+            <div class="reviewRating_nm3q">★★★★★ 5/5 Stars</div>
+        </div>
+    </section>
+
+    <!-- Additional Content Block -->
+    <section class="sectionBlock_rt5j">
+        <h2 class="sectionTitle_rt5j">Why Choose Energox Home?</h2>
+        <p class="sectionText_rt5j">Selecting a property management company is one of the most important decisions property owners make. Energox Home distinguishes itself through professional expertise, technological innovation, and unwavering commitment to client success. We don't view property management as a transaction; we view it as a partnership. Your property's success is our success. We invest in ongoing training for our team, ensuring they stay current with industry regulations, best practices, and emerging technologies. Our transparent communication means you always know what's happening with your property. We provide detailed documentation of all activities, expenses, and decisions. Our proactive approach prevents problems rather than simply reacting to crises. We maintain relationships with quality contractors, ensuring competitive pricing and reliable service. Our tenant screening process reduces vacancy rates and problem tenants. Our financial management maximizes your property's profitability. <button class="ctaButton_mk4p" onclick="scrollToSection('services')">Click here to continue</button></p>
+
+        <div class="gridLayout_hy8p">
+            <div class="gridCard_hy8p">
+                <h3 class="cardTitle_hy8p">Professional Expertise</h3>
+                <p class="cardText_hy8p">Our team includes certified property managers, accountants, and maintenance coordinators with extensive industry experience and ongoing professional development.</p>
+            </div>
+            <div class="gridCard_hy8p">
+                <h3 class="cardTitle_hy8p">Transparent Communication</h3>
+                <p class="cardText_hy8p">We maintain open communication channels with detailed reporting, regular updates, and accessible management team members who respond promptly to inquiries.</p>
+            </div>
+            <div class="gridCard_hy8p">
+                <h3 class="cardTitle_hy8p">Technology Integration</h3>
+                <p class="cardText_hy8p">Our advanced property management platform streamlines operations, provides real-time data access, and automates routine tasks for maximum efficiency.</p>
+            </div>
+            <div class="gridCard_hy8p">
+                <h3 class="cardTitle_hy8p">Proactive Management</h3>
+                <p class="cardText_hy8p">We prevent problems through preventative maintenance, thorough tenant screening, and regular property inspections rather than reacting to crises.</p>
+            </div>
+            <div class="gridCard_hy8p">
+                <h3 class="cardTitle_hy8p">Contractor Network</h3>
+                <p class="cardText_hy8p">We maintain relationships with vetted, quality contractors across all trades, ensuring competitive pricing and reliable service delivery.</p>
+            </div>
+            <div class="gridCard_hy8p">
+                <h3 class="cardTitle_hy8p">Financial Optimization</h3>
+                <p class="cardText_hy8p">Our financial management strategies maximize property profitability through efficient expense management, competitive rent rates, and reduced vacancy periods.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Service Details -->
+    <section class="sectionBlock_rt5j">
+        <h2 class="sectionTitle_rt5j">Specialized Property Management Services</h2>
+        <p class="sectionText_rt5j">Beyond standard property management, Energox Home offers specialized services tailored to unique property types and owner needs. Our experience spans residential apartments, single-family homes, commercial office spaces, retail properties, and mixed-use developments. We understand the distinct requirements of each property type and customize our management approach accordingly. For residential properties, we focus on tenant satisfaction, community standards, and property maintenance. For commercial properties, we emphasize lease compliance, tenant retention, and operational efficiency. Our specialized services include HOA management, vacation rental coordination, property rehabilitation oversight, and investment property optimization. We work with property owners to develop customized management plans addressing their specific goals and concerns.</p>
+
+        <div class="twoColumn_jm5k">
+            <div>
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">Residential Properties</h3>
+                <ul class="servicesList_pq7r">
+                    <li>Single-family home management</li>
+                    <li>Multi-unit apartment coordination</li>
+                    <li>Tenant community building</li>
+                    <li>Residential lease enforcement</li>
+                    <li>Homeowner association support</li>
+                    <li>Residential maintenance coordination</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">Commercial Properties</h3>
+                <ul class="servicesList_pq7r">
+                    <li>Office space management</li>
+                    <li>Retail property coordination</li>
+                    <li>Commercial lease negotiation</li>
+                    <li>Tenant retention programs</li>
+                    <li>Commercial maintenance services</li>
+                    <li>Business tenant relations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Footer Section -->
+<footer class="footerSection_qw2m">
+    <div class="footerContainer_qw2m">
+        <div class="footerBlock_qw2m">
+            <h3>Contact Information</h3>
+            <p>
+                <strong>Main Office:</strong><br>
+                Energox Home Property Management<br>
+                2847 Commerce Boulevard<br>
+                Suite 300<br>
+                Phone: <a href="tel:+15551234567" class="footerPhone_qw2m">(555) 123-4567</a><br>
+                Email: info@energoxhome.com
+            </p>
+        </div>
+        <div class="footerBlock_qw2m">
+            <h3>Regional Offices</h3>
+            <p>
+                <strong>North Region:</strong><br>
+                Phone: <a href="tel:+15559876543" class="footerPhone_qw2m">(555) 987-6543</a><br>
+                <br>
+                <strong>South Region:</strong><br>
+                Phone: <a href="tel:+15555551234" class="footerPhone_qw2m">(555) 555-1234</a><br>
+                <br>
+                <strong>Emergency Line:</strong><br>
+                <a href="tel:+15554445555" class="footerPhone_qw2m">(555) 444-5555</a>
+            </p>
+        </div>
+        <div class="footerBlock_qw2m">
+            <h3>Business Hours</h3>
+            <p>
+                <strong>Monday - Friday:</strong><br>
+                8:00 AM - 6:00 PM<br>
+                <br>
+                <strong>Saturday:</strong><br>
+                9:00 AM - 2:00 PM<br>
+                <br>
+                <strong>Emergency Support:</strong><br>
+                24/7 Available
+            </p>
+        </div>
+        <div class="footerBlock_qw2m">
+            <h3>Quick Links</h3>
+            <p>
+                <a href="#services" class="policyLink_qw2m">Services</a><br>
+                <a href="#about" class="policyLink_qw2m">About Us</a><br>
+                <a href="#" onclick="openModal('privacyModal_zx9k'); return false;" class="policyLink_qw2m">Privacy Policy</a><br>
+                <a href="#" onclick="openModal('termsModal_zx9k'); return false;" class="policyLink_qw2m">Terms of Service</a>
+            </p>
+        </div>
+    </div>
+    <div class="footerBottom_qw2m">
+        <p>&copy; 2024 Energox Home Property Management. All rights reserved. | 
+        <a href="#" onclick="openModal('privacyModal_zx9k'); return false;" class="policyLink_qw2m">Privacy Policy</a> | 
+        <a href="#" onclick="openModal('termsModal_zx9k'); return false;" class="policyLink_qw2m">Terms of Service</a></p>
+    </div>
+</footer>
+
+<!-- Privacy Policy Modal -->
+<div id="privacyModal_zx9k" class="modal_popup_zx9k">
+    <div class="modalContent_zx9k">
+        <span class="closeBtn_zx9k" onclick="closeModal('privacyModal_zx9k')">&times;</span>
+        <h2 class="modalTitle_zx9k">Privacy Policy</h2>
+        <div class="modalText_zx9k">
+            <p><strong>Last Updated: January 2024</strong></p>
+            
+            <h3>1. Introduction</h3>
+            <p>Energox Home ("we," "us," "our," or "Company") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.</p>
+
+            <h3>2. Information We Collect</h3>
+            <p>We may collect information about you in a variety of ways. The information we may collect on the site includes:</p>
+            <ul>
+                <li><strong>Personal Data:</strong> Name, email address, phone number, mailing address, property information, and financial details provided voluntarily.</li>
+                <li><strong>Device Information:</strong> Browser type, IP address, operating system, and pages visited.</li>
+                <li><strong>Usage Data:</strong> How you interact with our website, including time spent on pages and features accessed.</li>
+                <li><strong>Cookies:</strong> We use cookies to enhance your experience and analyze website usage patterns.</li>
+            </ul>
+
+            <h3>3. Use of Your Information</h3>
+            <p>Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the site to:</p>
+            <ul>
+                <li>Generate invoices and send billing information</li>
+                <li>Fulfill and manage your property management requests</li>
+                <li>Email you regarding your account or order</li>
+                <li>Improve our website and services</li>
+                <li>Respond to your inquiries and provide customer support</li>
+                <li>Comply with legal obligations</li>
+            </ul>
+
+            <h3>4. Disclosure of Your Information</h3>
+            <p>We may share your information in the following situations:</p>
+            <ul>
+                <li><strong>By Law or to Protect Rights:</strong> If required by law or to protect our legal rights.</li>
+                <li><strong>Third-Party Service Providers:</strong> We may share information with contractors and service providers who assist in our operations.</li>
+                <li><strong>Business Transfers:</strong> Your information may be transferred as part of a merger, acquisition, or sale of assets.</li>
+            </ul>
+
+            <h3>5. Security of Your Information</h3>
+            <p>We use administrative, technical, and physical security measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is completely secure.</p>
+
+            <h3>6. Contact Us</h3>
+            <p>If you have questions or concerns about this Privacy Policy, please contact us at:<br>
+            Email: privacy@energoxhome.com<br>
+            Phone: <a href="tel:+15551234567">(555) 123-4567</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Terms of Service Modal -->
+<div id="termsModal_zx9k" class="modal_popup_zx9k">
+    <div class="modalContent_zx9k">
+        <span class="closeBtn_zx9k" onclick="closeModal('termsModal_zx9k')">&times;</span>
+        <h2 class="modalTitle_zx9k">Terms of Service</h2>
+        <div class="modalText_zx9k">
+            <p><strong>Last Updated: January 2024</strong></p>
+
+            <h3>1. Agreement to Terms</h3>
+            <p>By accessing and using this website and our services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+
+            <h3>2. Use License</h3>
+            <p>Permission is granted to temporarily download one copy of the materials (information or software) on Energox Home's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+            <ul>
+                <li>Modify or copy the materials</li>
+                <li>Use the materials for any commercial purpose or for any public display</li>
+                <li>Attempt to decompile or reverse engineer any software contained on the website</li>
+                <li>Remove any copyright or other proprietary notations from the materials</li>
+                <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+            </ul>
+
+            <h3>3. Disclaimer</h3>
+            <p>The materials on Energox Home's website are provided on an 'as is' basis. Energox Home makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+
+            <h3>4. Limitations</h3>
+            <p>In no event shall Energox Home or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Energox Home's website.</p>
+
+            <h3>5. Accuracy of Materials</h3>
+            <p>The materials appearing on Energox Home's website could include technical, typographical, or photographic errors. Energox Home does not warrant that any of the materials on its website are accurate, complete, or current. Energox Home may make changes to the materials contained on its website at any time without notice.</p>
+
+            <h3>6. Links</h3>
+            <p>Energox Home has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Energox Home of the site. Use of any such linked website is at the user's own risk.</p>
+
+            <h3>7. Modifications</h3>
+            <p>Energox Home may revise these terms of service for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms of service.</p>
+
+            <h3>8. Governing Law</h3>
+            <p>These terms and conditions are governed by and construed in accordance with the laws of the jurisdiction in which Energox Home operates, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
+
+            <h3>9. Contact Information</h3>
+            <p>If you have any questions about these Terms of Service, please contact us at:<br>
+            Email: legal@energoxhome.com<br>
+            Phone: <a href="tel:+15551234567">(555) 123-4567</a></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function scrollToSection(sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal_popup_zx9k')) {
+            event.target.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.navMenu_kx7m a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+                scrollToSection(targetId);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
